@@ -1,0 +1,10 @@
+.allCards{
+    display: inline-block;
+    width: 900px;
+    margin-top: 5%;
+}
+
+.allCards input{
+    font-size: 20px;
+    margin-bottom: 50px;
+}

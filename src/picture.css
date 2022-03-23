@@ -1,0 +1,9 @@
+.imageDiv{
+    display: inline-block;
+    margin: 10px
+}
+
+.allImages{
+    width: 200px;
+    height: 200px;
+}

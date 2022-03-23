@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Login from './Login/googleLogin';
+import Card from './card';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cards from './cards';
+import Header from './Login/header';
+import { logDOM } from '@testing-library/react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends React.Component{
+
+  render(){
+    return (
+      <BrowserRouter>
+      
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/cards' element={<Cards />} />
+          <Route path='/card/:id' element={<Card />} />
+        </Routes>
     </div>
-  );
+    </BrowserRouter>
+    )
+  } 
+  
 }
 
 export default App;
